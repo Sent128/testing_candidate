@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Exam1 from './exam1';
 import Exam2 from './exam2';
+import Test from './test2_3';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
   {
     path: "/exam2",
     element: <Exam2 />,
+    errorElement: <>Error page!</>,
+  },
+  {
+    path: "/test",
+    element: <Test />,
     errorElement: <>Error page!</>,
   },
 ])

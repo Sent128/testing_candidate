@@ -5,6 +5,9 @@ function App() {
         <a href="/exam1">Exam 1</a>
         <a href="/exam2">Exam 2</a>
       </div>
+      <div className="flex gap-2">
+        <a href="/test">Test 2-3</a>
+      </div>
     </div>
   );
 }
