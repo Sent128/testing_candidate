@@ -3,13 +3,32 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Exam1 from './exam1';
+import Exam2 from './exam2';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/exam1",
+    element: <Exam1 />,
+    errorElement: <>Error page!</>,
+  },
+  {
+    path: "/exam2",
+    element: <Exam2 />,
+    errorElement: <>Error page!</>,
+  },
+])
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
